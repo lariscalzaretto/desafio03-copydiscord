@@ -1,0 +1,153 @@
+* { box-sizing: border-box; }
+
+body{
+    margin: 0;
+    font-family: "Open Sans", Arial, sans-serif;
+    background: #fff;    
+    color: #000000;
+}
+
+/* seção 1 (banner) */
+#secao-1{
+    position: relative; 
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:#fff;
+    background-image: url(ASSETS/IMAGES/banner.png) center/cover no-repeat;
+}
+
+/* títulos */
+h1{font-size: 8vw; letter-spacing: 0.05rem;}
+@media (min-width: 768px){h1 {font-size: 3.5rem;}}
+h1.secao1-text{font-family: "Luckiest Guy", cursive;}
+
+/* conteúdo da header */
+
+#secao-1 {
+  background-image: url("ASSETS/IMAGES/banner.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#secao-1 .content-header p.secao1-text{
+  max-width: 50vw;   
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 25px
+}
+@media (max-width: 768px){
+  #secao-1 .content-header p.secao1-text{ max-width: 90vw; }
+}
+
+.header{
+    position: absolute; top: 16px; left: 16px; right: 16px;
+    display: flex; align-items: center; justify-content: space-between;
+}
+
+.header-actions { display: flex; gap: 20px; flex-wrap:wrap; justify-content:flex-end;}
+
+.btn {
+  display: inline-block;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 9999px;
+  text-decoration: none;
+  white-space: nowrap;
+  pointer-events: none; cursor: default;
+}
+
+.btn-light { background: #fff; color: #23272a; }
+.btn-dark  { background: #23272a; color: #fff;}
+
+
+#logo{ width: 200px; height: auto; padding: 20px;}
+
+
+.content{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;                 
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+
+/* conteúdo da main */
+
+/* Seções 2–4 */
+#secao-3 , #secao-5{
+    background-color: #f6f6f6;
+}
+
+.content-main{
+  background:#fff; color:#000;
+  padding:64px 16px;
+}
+.content-main .content{
+  max-width:1120px; margin:0 auto;
+  display:grid; grid-template-columns:1fr;
+  gap:24px; align-items:center; text-align:center;
+}
+.content-main img{ width:100%; height:auto; display:block; }
+.content-main h1{ font-size:clamp(24px,5vw,40px); margin:0; }
+.content-main p{ max-width:56ch; margin:12px auto 0; line-height:1.6; }
+
+@media (min-width:992px){
+  .content-main .content{
+    grid-template-columns:1.1fr 1fr;
+    column-gap:48px; row-gap:12px; text-align:left;
+  }
+  /* padrão: imagem à esquerda (2 e 4) */
+  #secao-2 .content img, #secao-4 .content img{ grid-column:1; grid-row:1 / span 2; }
+  #secao-2 .content h1, #secao-2 .content p,
+  #secao-4 .content h1, #secao-4 .content p{ grid-column:2; }
+  #secao-2 .content p, #secao-4 .content p{ margin-top:8px; }
+
+  /* invertida: imagem à direita (3) */
+  #secao-3 .content img{ grid-column:2; grid-row:1 / span 2; }
+  #secao-3 .content h1, #secao-3 .content p{ grid-column:1; }
+  #secao-3 .content p{ margin-top:8px; }
+}
+
+/* secao 5*/
+/* SECTION 5 */
+
+#secao-5 .content{
+  max-width:1120px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  gap:16px;
+}
+
+#secao-5 p{
+  max-width:56ch;
+  margin:8px auto 0;
+  line-height:1.6;
+}
+#secao-5 img{
+  width:min(900px,100%);
+  height:auto;
+  display:block;
+  margin-top:12px;
+}
+
+
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #23272A;
+    color: #ffffff;
+}
+
+#logo-white{ width: 200px; height: auto; padding: 20px;}
